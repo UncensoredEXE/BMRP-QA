@@ -1,0 +1,11 @@
+TC-001      Authentication      Verify a user can successfully login
+TC-002      Authentication      Verify invalid credentials are rejected
+TC-003      Buildings           Verify buildings can be placed on an open tile
+TC-004      Buildings           Verify buildings cannot be placed on an occupied tile
+TC-005      Resources           Verify resource totals update after collection
+TC-006      Resources           Verify resources can be collected when storage not at maximum capacity
+TC-007      Resources           Verify resources cannot be collected when storage at maximum capacity
+TC-008      Resources           Verify resource totals update after successful attack
+TC-009      Combat              Verify attacks can be initiated against valid target
+TC-010      Combat              Verify attack cannot be initiated against invalid target
+TC-011      Regression          Verify previously working functionality working after new build
