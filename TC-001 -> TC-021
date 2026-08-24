@@ -1,0 +1,629 @@
+TC-001      Authentication      Verify a user can successfully login
+Test Area:
+Authentication
+
+Priority:
+Medium
+
+Preconditions:
+User has valid discord account
+User has Launcher Installed from discord
+
+Test Steps:
+1. Install + Open launcher
+2. Create launcher login credentials
+3. Verify credentials are operational
+
+Expected Result:
+Game launches
+
+Actual Result:
+Login Successful, game launched
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-002      Authentication      Verify invalid credentials are rejected
+Test Area:
+Authentication
+
+Priority:
+Medium
+
+Preconditions:
+User has launcher installed
+
+Test Steps:
+1. Install + open launcher
+2. Attmept login with invalid credentials
+
+Expected Result:
+Launcher ----------------------------------------------------------------------------
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-003      Buildings           Verify buildings can be placed on an open tile
+Test Area:
+Buildings
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-004      Buildings           Verify buildings cannot be placed on an occupied tile
+Test Area:
+Buildings
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-005      Resources           Verify resource totals update after collection
+Test Area:
+Resources
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-006      Resources           Verify resources can be collected when storage not at maximum capacity
+Test Area:
+Resources
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-007      Resources           Verify resources cannot be collected when storage at maximum capacity
+Test Area:
+Resources
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-008      Resources           Verify resource totals update after successful attack
+Test Area:
+Resources
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-009      Combat              Verify Attack screen loads enemy targets
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-010      Combat              Verify attacks can be initiated against valid target
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-011      Combat              Verify attack cannot be initiated against invalid target
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-012      Combat              Verify Catapult unavailable without catapult constructed 
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-013      Combat              Verify catapult action viable within attack screen with constructed catapult 
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-014 Combat              Verify Immediate catapult interaction upon entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-015      Combat              Verify catapult interaction at 1 second after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-016      Combat              Verify catapult interaction at 2 seconds after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-017      Combat              Verify catapult interaction at 3 seconds after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-018      Combat              Verify catapult interaction at 4 seconds after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-019      Combat              Verify catapult interaction at 5 seconds after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-020      Combat              Verify catapult interaction after 5 seconds after entering attack screen within enemy base
+Test Area:
+Combat
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
+
+TC-021      Regression          Verify previously working functionality working after new build
+Test Area:
+Regression
+
+Priority:
+Medium
+
+Preconditions:
+...
+
+Test Steps:
+1. ...
+2. ...
+3. ...
+
+Expected Result:
+...
+
+Actual Result:
+...
+
+Status:
+Not Executed
+
+Evidence:
+...
+
+Defect:
+None
