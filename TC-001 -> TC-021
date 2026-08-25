@@ -21,7 +21,7 @@ Actual Result:
 Login Successful, game launched
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
@@ -44,13 +44,13 @@ Test Steps:
 2. Attmept login with invalid credentials
 
 Expected Result:
-Launcher ----------------------------------------------------------------------------
+Launcher denies entry
 
 Actual Result:
-...
+Launcher denies entry
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
@@ -58,7 +58,7 @@ Evidence:
 Defect:
 None
 
-TC-003      Buildings           Verify buildings can be placed on an open tile
+TC-003      Buildings           Verify buildings can be placed on an open tile ----------------------------------
 Test Area:
 Buildings
 
