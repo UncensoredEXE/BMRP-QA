@@ -3,7 +3,7 @@ Test Area:
 Authentication
 
 Priority:
-Medium
+High
 
 Preconditions:
 User has valid discord account
@@ -28,13 +28,13 @@ Evidence:
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-002      Authentication      Verify invalid credentials are rejected
 Test Area:
 Authentication
 
 Priority:
-Medium
+High
 
 Preconditions:
 User has launcher installed
@@ -57,8 +57,8 @@ Evidence:
 
 Defect:
 None
-
-TC-003      Buildings           Verify buildings can be placed on an open tile ----------------------------------
+=============================================================================================================================================================================
+TC-003      Buildings           Verify buildings can be placed on an open tile 
 Test Area:
 Buildings
 
@@ -66,28 +66,30 @@ Priority:
 Medium
 
 Preconditions:
-...
+-User has launcher installed
+-User has successfully logged in with valid credentials
+-User has application open
+-User has tutorial open
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Launch application
+2. Place building as prompted by tutorial in a valid tile
 
 Expected Result:
-...
+Building is placed, timer appears for building construction countdown
 
 Actual Result:
-...
+Building is constructed
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-004      Buildings           Verify buildings cannot be placed on an occupied tile
 Test Area:
 Buildings
@@ -96,28 +98,30 @@ Priority:
 Medium
 
 Preconditions:
-...
+-User has launcher installed
+-User has successfully logged in with valid credentials
+-User has application open
+-User has tutorial open
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Proceed through tutorial prompt to construct building
+2. Place building on a red (occupied) tile
 
 Expected Result:
-...
+Building construction fails, removing prompt to place building
 
 Actual Result:
-...
+Building is not constructed
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-005      Resources           Verify resource totals update after collection
 Test Area:
 Resources
@@ -126,28 +130,31 @@ Priority:
 Medium
 
 Preconditions:
-...
+-User application open
+-User has tutorial open
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Proceed through tutorial to resource collection prompt
+2. Note resource count in top left hand side of screen
+3. Note resource harvester collected count
+4. Select "collect" in tutorial prompt
+5. Note resource storage totals match the sum of pre-collection + harvester collection count.
 
 Expected Result:
-...
+Resource storage total updates capacity count to match pre-count total + harvester count total after selecting "collect"
 
 Actual Result:
-...
+Resource totals update, matching the sum of both harvester + storage totals
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-006      Resources           Verify resources can be collected when storage not at maximum capacity
 Test Area:
 Resources
@@ -156,58 +163,61 @@ Priority:
 Medium
 
 Preconditions:
-...
+-Totorial complete
+-Resource storage capacity not at maximum
+-Resource harvesters have collected resources ready to be collected
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Proceed through tutorial
+2. Confirm resource storage not at maximum capacity
+3. "collect" resources from harvester
 
 Expected Result:
-...
+UI displays storage totals update to the sum of pre-storage totals + resource harvester total
 
 Actual Result:
-...
+User storage capacity totals update to correct total
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-007      Resources           Verify resources cannot be collected when storage at maximum capacity
 Test Area:
 Resources
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Totorial successfully complete
+-Resource storage capacity at maximum
+-Resource harvesters have collected resources ready to be collectd
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Max out resource storage capacity
+2. "collect" resources from harvester
 
 Expected Result:
-...
+User unable to collect resources above allocated storage capacity
 
 Actual Result:
-...
+User unable to collect resources beyond storage capacity
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-008      Resources           Verify resource totals update after successful attack
 Test Area:
 Resources
@@ -216,48 +226,55 @@ Priority:
 Medium
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room consuructed
+-Monster housing hosts monsters
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Launch world map UI from map room
+2. Select target enemy yard within target range
+3. Select "attack" from UI
+4. Deploy monsters in valid tile to attack yard
+5. Destroy enemy resource harvester OR resource storage
+6. End attack
 
 Expected Result:
-...
+Resource totals collected from attack merge with resource storage totals within User home yard
 
 Actual Result:
-...
+Resource totals within user yard updated to correct sum
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-009      Combat              Verify Attack screen loads enemy targets
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room consuructed
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Launch world map from map room UI
+2. Verify enemy targets generated within world map UI
 
 Expected Result:
-...
+World map UI generates with user option to select from multiple enemy targets
 
 Actual Result:
-...
+World map UI has multiple targets available to attack
 
 Status:
 Not Executed
@@ -267,57 +284,60 @@ Evidence:
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-010      Combat              Verify attacks can be initiated against valid target
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
 ...
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Open world map UI
+2. Select enemy target within target range
+3. Select "attack" from UI
 
 Expected Result:
-...
+Enemy base generated after selecting "attack" from world map UI on valid target generates enemy base for user to attack
 
 Actual Result:
-...
+Enemy base is viable target to attack
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-011      Combat              Verify attack cannot be initiated against invalid target
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room consuructed
+-Monster housing hosts monsters
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Open world map UI
+2. Select enemy target outside of target range
+3. Select "attack" from UI
 
 Expected Result:
-...
+User unable to attack enemy yard + prompted with message informing user an attack is not possible on a yard outside of catapult range
 
 Actual Result:
-...
+User unable to attack enemy yard
 
 Status:
 Not Executed
@@ -327,303 +347,123 @@ Evidence:
 
 Defect:
 None
-
+=============================================================================================================================================================================
 TC-012      Combat              Verify Catapult unavailable without catapult constructed 
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room constructed
+-Monster housing contains monsters
+-Catapult NOT constructed
+-Valid enemy target within attack range
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Open the world map.
+2. Select an enemy target within range.
+3. Select Attack.
+4. Select the catapult.
 
 Expected Result:
-...
+User unable to select catapult and prompted appropiate message
 
 Actual Result:
-...
+User unable to select catapult action
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
-TC-013      Combat              Verify catapult action viable within attack screen with constructed catapult 
+=============================================================================================================================================================================
+TC-013      Combat              Verify catapult action available within attack screen with constructed catapult 
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room constructed
+-Monster housing contains monsters
+-Catapult constructed
+-Valid enemy target within attack range
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Open the world map.
+2. Select an enemy target within range.
+3. Select Attack.
+4. Select the catapult.
 
 Expected Result:
-...
+Catapult ammunition selection UI appears, allowing user to select munition type.
 
 Actual Result:
-...
+User can select and utilize catapult
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
 None
-
-TC-014 Combat              Verify Immediate catapult interaction upon entering attack screen within enemy base
+=============================================================================================================================================================================
+TC-014 Combat              Verify catapult action upon entering attack screen within enemy base
 Test Area:
 Combat
 
 Priority:
-Medium
+High
 
 Preconditions:
-...
+-Tutorial complete
+-Monster housing constructed
+-Map room constructed
+-Monster housing contains monsters
+-Catapult constructed
+-Valid enemy target within attack range
 
 Test Steps:
-1. ...
-2. ...
-3. ...
+1. Open the world map.
+2. Select an enemy target within range.
+3. Select Attack.
+4. Select the catapult.
+5. Wait for the designated time interval before selecting ammunition.
+6. Select catapult ammunition.
+7. select target area to fire catapult
 
 Expected Result:
-...
+Catapult firesselected ammunition at user selected target location
 
 Actual Result:
-...
+Catapult fires prematurely when immediatly entering enemy yard attack UI upon selecting catapult ammunition.
 
 Status:
-Not Executed
+Executed
 
 Evidence:
 ...
 
 Defect:
-None
+Catapult fires prematurely
 
-TC-015      Combat              Verify catapult interaction at 1 second after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-016      Combat              Verify catapult interaction at 2 seconds after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-017      Combat              Verify catapult interaction at 3 seconds after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-018      Combat              Verify catapult interaction at 4 seconds after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-019      Combat              Verify catapult interaction at 5 seconds after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-020      Combat              Verify catapult interaction after 5 seconds after entering attack screen within enemy base
-Test Area:
-Combat
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
-
-TC-021      Regression          Verify previously working functionality working after new build
-Test Area:
-Regression
-
-Priority:
-Medium
-
-Preconditions:
-...
-
-Test Steps:
-1. ...
-2. ...
-3. ...
-
-Expected Result:
-...
-
-Actual Result:
-...
-
-Status:
-Not Executed
-
-Evidence:
-...
-
-Defect:
-None
+Ececution
+1. Catapult fires prematurely when immediatly entering enemy yard attack UI upon selecting catapult ammunition.
+2. Catapult fires prematurely 2 seconds after entering enemy yard attack UI and selecting catapult ammunition.
+3. Catapult fires prematurely 3 seconds after entering enemy yard attack UI and selecting catapult ammunition.
+4. Catapult fires prematurely 4 seconds after entering enemy yard attack UI and selecting catapult ammunition.
+5. Catapult fires selected ammunition at user selected target location 5 seconds after entering enemy yard attack UI.
+6. Catapult fires selected ammunition at user selected target location 6 seconds after entering enemy yard attack UI.
+=============================================================================================================================================================================
