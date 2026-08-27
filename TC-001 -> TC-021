@@ -9,10 +9,14 @@ Preconditions:
 User has valid discord account
 User has Launcher Installed from discord
 
+Data:
+Username: gavinevans49@gmail.com
+Password: A******101!
+
 Test Steps:
 1. Install + Open launcher
 2. Create launcher login credentials
-3. Verify credentials are operational
+3. Verify valid username + valid password log in attempt operational
 
 Expected Result:
 Game launches
@@ -21,7 +25,7 @@ Actual Result:
 Login Successful, game launched
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -36,12 +40,19 @@ Authentication
 Priority:
 High
 
+Data:
+InvalidUsername: Testuser@gmail.com
+InvalidPassword: Guesswhat123!
+
 Preconditions:
 User has launcher installed
 
 Test Steps:
 1. Install + open launcher
-2. Attmept login with invalid credentials
+2. Attempt login with invalid username
+3. Attempt login with invalid password
+4. Attempt login with blank username
+5. Attempt login with blank password
 
 Expected Result:
 Launcher denies entry
@@ -50,7 +61,7 @@ Actual Result:
 Launcher denies entry
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -76,13 +87,13 @@ Test Steps:
 2. Place building as prompted by tutorial in a valid tile
 
 Expected Result:
-Building is placed, timer appears for building construction countdown
+Building is placed on the selected valid tile and a construction timer appears.
 
 Actual Result:
-Building is constructed
+Building was placed on the selected tile and the construction timer appeared.
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -114,7 +125,7 @@ Actual Result:
 Building is not constructed
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -129,6 +140,11 @@ Resources
 Priority:
 Medium
 
+Data:
+Stored resources: 500
+Harvested Resources: 100
+Expected total storage post collection: 600
+
 Preconditions:
 -User application open
 -User has tutorial open
@@ -138,7 +154,7 @@ Test Steps:
 2. Note resource count in top left hand side of screen
 3. Note resource harvester collected count
 4. Select "collect" in tutorial prompt
-5. Note resource storage totals match the sum of pre-collection + harvester collection count.
+5. Note resource storage totals match the sum of pre-collection + harvester collection count
 
 Expected Result:
 Resource storage total updates capacity count to match pre-count total + harvester count total after selecting "collect"
@@ -147,7 +163,7 @@ Actual Result:
 Resource totals update, matching the sum of both harvester + storage totals
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -162,8 +178,14 @@ Resources
 Priority:
 Medium
 
+Data:
+Stored resources: 500
+Harvested Resources: 100
+Storage Capacity: 2,000
+Expected total storage post collection: 600
+
 Preconditions:
--Totorial complete
+-Tutorial complete
 -Resource storage capacity not at maximum
 -Resource harvesters have collected resources ready to be collected
 
@@ -179,7 +201,7 @@ Actual Result:
 User storage capacity totals update to correct total
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -193,6 +215,13 @@ Resources
 
 Priority:
 High
+
+Data:
+Stored resources: 2,000
+Harvested Resources: 100
+Storage Capacity: 2,000
+Expected total storage post collection: 2,000
+Expected Harvested resources stored post collection: 100
 
 Preconditions:
 -Totorial successfully complete
@@ -210,7 +239,7 @@ Actual Result:
 User unable to collect resources beyond storage capacity
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -225,19 +254,24 @@ Resources
 Priority:
 Medium
 
+Data:
+Stored resources: 1,000
+Harvested Resources: 600
+Expected total storage post attack: 1,600
+
 Preconditions:
 -Tutorial complete
 -Monster housing constructed
--Map room consuructed
+-Map room constructed
 -Monster housing hosts monsters
 
 Test Steps:
-1. Launch world map UI from map room
-2. Select target enemy yard within target range
-3. Select "attack" from UI
-4. Deploy monsters in valid tile to attack yard
-5. Destroy enemy resource harvester OR resource storage
-6. End attack
+1. Open the World Map from the Map Room.
+2. Select an enemy yard within attack range.
+3. Select Attack.
+4. Deploy monsters to a valid tile.
+5. Destroy an enemy resource harvester or resource storage.
+6. End the attack
 
 Expected Result:
 Resource totals collected from attack merge with resource storage totals within User home yard
@@ -246,7 +280,7 @@ Actual Result:
 Resource totals within user yard updated to correct sum
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -277,8 +311,7 @@ Actual Result:
 World map UI has multiple targets available to attack
 
 Status:
-Not Executed
-
+Pass
 Evidence:
 ...
 
@@ -293,7 +326,11 @@ Priority:
 High
 
 Preconditions:
-...
+-Tutorial completed
+-Monster housing constructed
+-Map room constructed
+-Monster housing contains monsters
+-Valid enemy target within attack range
 
 Test Steps:
 1. Open world map UI
@@ -307,7 +344,7 @@ Actual Result:
 Enemy base is viable target to attack
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -340,8 +377,7 @@ Actual Result:
 User unable to attack enemy yard
 
 Status:
-Not Executed
-
+Pass
 Evidence:
 ...
 
@@ -370,13 +406,13 @@ Test Steps:
 4. Select the catapult.
 
 Expected Result:
-User unable to select catapult and prompted appropiate message
+User is unable to select the catapult and is presented with an appropriate message.
 
 Actual Result:
 User unable to select catapult action
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -412,7 +448,7 @@ Actual Result:
 User can select and utilize catapult
 
 Status:
-Executed
+Pass
 
 Evidence:
 ...
@@ -420,7 +456,7 @@ Evidence:
 Defect:
 None
 =============================================================================================================================================================================
-TC-014 Combat              Verify catapult action upon entering attack screen within enemy base
+TC-014 Combat              Verify catapult ammunition can be selected
 Test Area:
 Combat
 
@@ -445,25 +481,25 @@ Test Steps:
 7. select target area to fire catapult
 
 Expected Result:
-Catapult firesselected ammunition at user selected target location
+Catapult fires selected ammunition at user selected target location
 
 Actual Result:
-Catapult fires prematurely when immediatly entering enemy yard attack UI upon selecting catapult ammunition.
+Catapult fires prematurely when immediately entering the enemy yard attack UI upon selecting catapult ammunition.
 
 Status:
-Executed
+FAIL
 
 Evidence:
 ...
 
 Defect:
-Catapult fires prematurely
+JIRA BUG-001: Catapult fires prematurely
 
 Ececution
-1. Catapult fires prematurely when immediatly entering enemy yard attack UI upon selecting catapult ammunition.
-2. Catapult fires prematurely 2 seconds after entering enemy yard attack UI and selecting catapult ammunition.
-3. Catapult fires prematurely 3 seconds after entering enemy yard attack UI and selecting catapult ammunition.
-4. Catapult fires prematurely 4 seconds after entering enemy yard attack UI and selecting catapult ammunition.
-5. Catapult fires selected ammunition at user selected target location 5 seconds after entering enemy yard attack UI.
-6. Catapult fires selected ammunition at user selected target location 6 seconds after entering enemy yard attack UI.
+1. Catapult fires prematurely when immediately entering the enemy yard attack UI and selecting catapult ammunition.
+2. Catapult fires prematurely 2 seconds after entering the enemy yard attack UI and selecting catapult ammunition.
+3. Catapult fires prematurely 3 seconds after entering the enemy yard attack UI and selecting catapult ammunition.
+4. Catapult fires prematurely 4 seconds after entering the enemy yard attack UI and selecting catapult ammunition.
+5. Catapult fires selected ammunition at the user-selected target location 5 seconds after entering the enemy yard attack UI.
+6. Catapult fires selected ammunition at the user-selected target location 6 seconds after entering the enemy yard attack UI.
 =============================================================================================================================================================================
