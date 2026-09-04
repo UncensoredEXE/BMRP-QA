@@ -14,12 +14,13 @@ Username: gavinevans49@gmail.com
 Password: A******101!
 
 Test Steps:
-1. Install + Open launcher
-2. Create launcher login credentials
-3. Verify valid username + valid password log in attempt operational
+1. Open launcher
+2. Enter valid test-account credential
+3. Submit login attempt
+4. Verify game launches successfully
 
 Expected Result:
-Game launches
+User is authenticated and game successfully launches
 
 Actual Result:
 Login Successful, game launched
