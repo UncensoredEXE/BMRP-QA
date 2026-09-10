@@ -504,3 +504,46 @@ Ececution
 5. Catapult fires selected ammunition at the user-selected target location 5 seconds after entering the enemy yard attack UI.
 6. Catapult fires selected ammunition at the user-selected target location 6 seconds after entering the enemy yard attack UI.
 =============================================================================================================================================================================
+TC-015 Combat              Verify catapult ammunition can be selected
+Test Area:
+Combat
+
+Priority:
+High
+
+Preconditions:
+-Tutorial is complete 
+-Monster housing is constructed and contains monsters
+-Map Room is constructed
+-Catapult is constructed
+-Valid enemy target is within attack range 
+-BUG-001 fix has been deployed
+
+Test Steps:
+1. Open the World Map.
+2. Select an enemy target within attack range.
+3. Select **Attack**.
+4. Select the catapult.
+5. Select available catapult ammunition.
+6. Attempt to fire the catapult before the 5-second timing threshold.
+7. Verify the catapult does not fire prematurely.
+8. Wait until the 5-second timing threshold has been reached.
+9. Select the intended target location.
+10. Verify the catapult fires at the selected target location.
+
+Expected Result:
+The catapult does not fire before the required timing threshold. 
+After the timing threshold has been reached, the user can select the intended target location and the catapult fires at that location.
+
+Actual Result:
+Not Run
+
+Status:
+Not Run
+
+Evidence:
+...
+
+Defect:
+
+=============================================================================================================================================================================
